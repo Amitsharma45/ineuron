@@ -1,0 +1,21 @@
+.form{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+.formItem{
+    margin: 10px 0;
+}
+.formItem >label{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.formItem >input{
+    width: 250px;
+    height: 20px;
+}
+.err{
+    color: red;
+}

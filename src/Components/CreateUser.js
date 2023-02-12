@@ -4,7 +4,7 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-const SignupSchema = Yup.object().shape({
+const userSchema = Yup.object().shape({
     firstName: Yup.string()
         .min(2, 'Too Short!')
         .max(20, 'Too Long!')
@@ -32,7 +32,7 @@ export default function CreateUser() {
                         phoneNumber: '',
                         age: ''
                     }}
-                    validationSchema={SignupSchema}
+                    validationSchema={userSchema}
                     onSubmit={async (values) => {
                             const { data } = await axios.post('https://blue-journalist-bbrpv.ineuron.app:4000/user/create', values)
                             console.log(values)

@@ -16,7 +16,7 @@ const SignupSchema = Yup.object().shape({
         .required('Required')
         .matches(/^[aA-zZ\s]+$/, "Only alphabets are allowed for this field "),
     age: Yup.string().min(1, 'Invalid age').required('Required'),
-    phoneNumber: Yup.string().min(1, 'Invalid Number').max(10, 'Number should be less then 10 digit').required('Required')
+    phoneNumber: Yup.string().min(10, 'Invalid Number').max(10, 'Number should be less then 10 digit').required('Required')
 
 });
 export default function CreateUser() {
